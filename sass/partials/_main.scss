@@ -1,0 +1,111 @@
+#main {
+    width: 100%;
+    padding-top: 90px;
+    text-align: center;
+    background: url(../images/back.jpg);
+    border-bottom: 1px solid lighten($gray, 30%);
+    position: relative;
+    @media #{$tablet-small} {
+        padding-top: 150px;
+    }
+
+    p {
+        color: $gray;
+    }
+    
+	.three {
+		width: 200px;
+        text-align: left;
+        @include padding(35px, 5px, 45px, 5px);
+        @media #{$tablet-small} {
+            float: none;
+            width: auto;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+		&:nth-of-type(1n){
+			float:left;
+		}
+		&:nth-of-type(2n){
+            @include center;
+    		display: inline-block;
+    		float: none;
+		}
+		&:nth-of-type(3n){
+			float:right;
+		}
+
+		h3 {
+	  		text-indent: 55px;
+	    	line-height: $line_height * 2;
+            font-weight: normal;
+	    	background:{
+                image: url(../images/icon01.png);
+                repeat: no-repeat;
+            }
+            @media #{$tablet-small} {
+                background-position: 31%;
+            }
+            @media #{$phone} {
+                background-position: 20%;
+            }
+		}
+        
+		&:nth-of-type(2n) h3{
+		    background-image: url(../images/icon02.png);
+		}
+		&:nth-of-type(3n) h3{
+		    background-image: url(../images/icon03.png);
+		}
+
+		img {
+			margin: 20px 0 20px 0;
+		}
+
+	}
+}
+
+.highlighted {
+    text-align: left;
+    font-size: 14px;
+    background: $white;
+    box-shadow: $shadow;
+    padding: 30px;
+    @include absolute;
+    top: -60px;
+    left: 0;
+    right: 0;
+    width: 710px;
+    @include center;
+    @include border-radius(7px);
+    @media #{$tablet} {
+        width: auto;
+    }
+
+    h3 {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .btn {
+        float: right;
+        margin-top: 3px;
+        @media #{$tablet-small} {
+            @include center;
+            float: none;
+            display: block;
+            text-align: center;
+            margin-top: 14px;
+        }
+    }
+    
+    div {
+        width: 300px;
+        float: left;
+        @media #{$tablet-small} {
+            float: none;
+            width: auto;
+        }
+    }
+}
+

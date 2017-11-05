@@ -1,0 +1,61 @@
+footer {
+	width: 100%;
+	border-top: 1px solid lighten($gray, 36%);
+	@include padding(45px ,0px ,50px, 0px);
+	@media #{$tablet-small} {
+		margin-top: 55px;
+	}
+	@media #{$tablet} {
+		margin-top: 25px;
+	}
+
+  	ul {
+    	width: 20%;
+    	margin-left: 32px;
+	    font-size: 16px;
+	    float: left;
+	   	@media #{$tablet-small} {
+	   		width: auto;
+    		float: none;
+    		margin: 0 0 30px 20px;
+	   	}
+		&:nth-child(3n) {
+			a{
+		    	display: inline-block;
+		    	border-bottom: 1px solid lighten($gray, 20%);
+		    	padding-bottom: 16px;
+ 			}
+ 		}
+
+		li {
+	  		margin-bottom: 4px;
+			&:first-child {
+			padding-bottom: 7px;
+			font:{
+				weight: $bold;
+				size: 19px;
+			}
+			}
+			a {
+				&:hover {
+				@extend a:hover;
+				}
+ 			}
+ 		}
+	}
+
+	.logo {
+	 	float: none;
+	 	color: $red !important;
+	 	@include padding(0, 0, 14px, 0);
+	 	@media #{$tablet-small} {
+	 	  	float:none;
+	 	}
+ 	}
+ 	
+ 	span{
+ 		font-weight: $bold;
+ 		color: $gray;
+ 	}
+}
+
